@@ -30,6 +30,8 @@ import TeacherIndex from "./Dashboard/TeacherDashboard/TeacherIndex/TeacherIndex
 import StudentIndex from "./Dashboard/StudentDashboard/StudentIndex/StudentIndex";
 import AdminIndex from "./Dashboard/AdminDashboard/AdminIndex/AdminIndex";
 import Instructor from "./Dashboard/AdminDashboard/Instructor/Instructor";
+import LoginPage from "./Auth/LoginPage";
+import SignUpPage from "./Auth/SignUpPage";
 
 function App() {
   return (
@@ -72,6 +74,10 @@ function App() {
           <Route path="logout" element={<StudentLogout />} />
           <Route path="StudentIndex" element={<StudentIndex />} />
         </Route>
+
+        {/* Default Route */}
+        <Route path="/loginPage"  element={<LoginPage/>}/>
+        <Route path="/signUpPage"  element={<SignUpPage/>}/>
 
         <Route   path="*"  element={<h1>Page not Found </h1>} />
       </Routes>
