@@ -18,6 +18,20 @@ function AdminNavigation() {
         <span className="mr-3">📊</span>
         Admin Dashboard
       </NavLink>
+      <NavLink
+        to="/instructor"
+        className={({ isActive }) =>
+          `px-4 py-3 flex items-center text-sm font-medium transition-colors ${
+            isActive
+              ? "bg-gray-900 text-white border-l-4 border-blue-500"
+              : "text-gray-300 hover:bg-gray-700 hover:text-white"
+          }`
+        }
+        end
+      >
+        <span className="mr-3">📊</span>
+        instructor
+      </NavLink>
 
       <NavLink
         to="/batch"

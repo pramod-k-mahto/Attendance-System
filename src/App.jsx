@@ -27,6 +27,9 @@ import StudentReports from "./Dashboard/StudentDashboard/Reports/StudentReports"
 import StudentLogout from "./Dashboard/StudentDashboard/Logout/StudentLogout";
 import StudentAttendance from "./Dashboard/StudentDashboard/Attendance/StudentAttendance";
 import TeacherIndex from "./Dashboard/TeacherDashboard/TeacherIndex/TeacherIndex";
+import StudentIndex from "./Dashboard/StudentDashboard/StudentIndex/StudentIndex";
+import AdminIndex from "./Dashboard/AdminDashboard/AdminIndex/AdminIndex";
+import Instructor from "./Dashboard/AdminDashboard/Instructor/Instructor";
 
 function App() {
   return (
@@ -34,13 +37,15 @@ function App() {
       <Routes>
         {/* Admin Dashboard Routes */}
         <Route path="/" element={<AdminDashboard />}>
-          <Route index element={<AdminBatch />} />
+          <Route index element={<AdminIndex />} />
           <Route path="attendance" element={<AdminAttendance />} />
           <Route path="notification" element={<AdminNotification />} />
           <Route path="reports" element={<AdminReports />} />
           <Route path="batch" element={<AdminBatch />} />
           <Route path="setting" element={<AdminSetting />} />
           <Route path="logout" element={<AdminLogout />} />
+          <Route path="adminIndex" element={<AdminIndex />} />
+          <Route path="instructor" element={<Instructor />} />
         </Route>
 
         {/* Teacher Dashboard Routes */}
@@ -58,13 +63,14 @@ function App() {
 
         {/* Student Dashboard Routes */}
         <Route path="/student" element={<StudentDashboard />}>
-          <Route index element={<StudentBatch />} />
+          <Route index element={<StudentIndex />} />
           <Route path="attendance" element={<StudentAttendance />} />
           <Route path="notification" element={<StudentNotification />} />
           <Route path="reports" element={<StudentReports />} />
           <Route path="batch" element={<StudentBatch />} />
           <Route path="setting" element={<StudentSetting />} />
           <Route path="logout" element={<StudentLogout />} />
+          <Route path="StudentIndex" element={<StudentIndex />} />
         </Route>
 
         <Route   path="*"  element={<h1>Page not Found </h1>} />
